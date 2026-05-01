@@ -1,9 +1,10 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  title:        "Load Priority Controller 
+"      # Project title
+  author:       "Abiola Enoch"      # Your name
+  discord:      "rzbzt_40244"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "An load priority power controller that allocates power by priority and sheds lower loads to prevent overload."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -11,32 +12,32 @@ project:
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "load_priority_controller"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "project.v"
+    - "LPC.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
+  ui[0]: "clk"
+  ui[1]: "reset"
+  ui[2]: "undervoltage_flag"
+  ui[3]: "medium_power_flag"
+  ui[4]: "high_power_flag"
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
+  uo[0]: "load_enable[0] (L1)"
+  uo[1]: "load_enable[1] (L2)"
+  uo[2]: "load_enable[2] (L3)"
+  uo[3]: "load_enable[3] (L4)"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
