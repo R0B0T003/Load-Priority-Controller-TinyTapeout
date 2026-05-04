@@ -2,7 +2,7 @@ module load_priority_controller(
     input wire clk,
     input wire rst,
 
-    // External power status (Option C)
+    // External power status 
     input wire undervoltage_flag,
     input wire medium_power_flag,
     input wire high_power_flag,
