@@ -1,6 +1,6 @@
 # Load Priority Controller (LPC) — Detailed Explanation
 
-**Author:** Abiola Enoch  
+**Authors:** Abiola Enoch, Omotosho Enoch, Esabu Blessing. 
 **Platform:** Tiny Tapeout (TinyTapeout / tt-gds, Sky130A PDK)  
 **Language:** Verilog  
 **Tile Size:** 1×1  
