@@ -1,4 +1,4 @@
-module load_priority_controller(
+module tt_un_example (
     input wire clk,
     input wire rst,
 
