@@ -1,7 +1,7 @@
 module tt_um_load_priority_controller (
     input wire clk,
     input wire rst_n,
-    input wire ena;
+    input wire ena,
 
     // External power status 
     input wire undervoltage_flag,
