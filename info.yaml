@@ -25,19 +25,19 @@ project:
 pinout:
   # Inputs
   ui[0]: "clk"
-  ui[1]: "reset"
+  ui[1]: "rst_n"
   ui[2]: "undervoltage_flag"
   ui[3]: "medium_power_flag"
   ui[4]: "high_power_flag"
-  ui[5]: ""
+  ui[5]: "ena"
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: "load_enable[0] (L1)"
-  uo[1]: "load_enable[1] (L2)"
-  uo[2]: "load_enable[2] (L3)"
-  uo[3]: "load_enable[3] (L4)"
+  uo[0]: "load_enable[0]"
+  uo[1]: "load_enable[1]"
+  uo[2]: "load_enable[2]"
+  uo[3]: "load_enable[3]"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
