@@ -1,7 +1,3 @@
-## About
-
-An IEEE Division 1 Open Silicon Tapeout Initiative Project. A smart hardware FSM that stages load activation, filters noise, and sheds lower-priority loads to prevent power collapse. No firmware required.
-
 ## How it works
 
 The Load Priority Controller is a **6-state Finite State Machine (FSM)** implemented in pure digital logic. It manages power distribution across three prioritised loads based on external power-status signals — no firmware, no processor.

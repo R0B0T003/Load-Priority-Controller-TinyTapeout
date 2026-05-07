@@ -3,7 +3,7 @@ project:
   title:        "Load Priority Controller"
   author:       "Abiola Enoch, Omotosho Enoch, Esabu Blessing"
   discord:      "rzbzt_40244, omotosho_enoch"
-  description:  "An IEEE Division 1 Open Silicon Tapeout Initiative — Smart hardware FSM with staged load activation, noise filtering, and load shedding for power-constrained systems. No firmware required."
+  description:  "An IEEE Division 1 Open Silicon Tapeout Initiative - Smart hardware FSM with staged load activation, noise filtering, and load shedding for power-constrained systems. No firmware required."
   language:     "Verilog"
   clock_hz:     50000000
 

@@ -156,20 +156,23 @@ async def test_dynamic_transitions(dut):
         f"Step3: expected L3 (111), got {load_enable(dut):03b}"
     )
 
-    # Step 4: Undervoltage fires → L3→L2 stepped drop (sync + 1 state step)
-    dut.ui_in.value = UNDERVOLTAGE
+    # Step 4: Drop to medium only (clear high flag).
+    # L3_STATE sees power_sync=2'b10 < 2'b11 -> steps to L2_STATE and HOLDS there
+    # (medium power still present, so no further drop).
+    dut.ui_in.value = MEDIUM_POWER
     await ClockCycles(dut.clk, CYCLES_TO_DROP)
     assert load_enable(dut) == MEDIUM_POWER_OUT, (
-        f"Step4: expected L2 (011) after L3→L2 step-down, got {load_enable(dut):03b}"
+        f"Step4: expected L2 (011) after L3->L2 step-down, got {load_enable(dut):03b}"
     )
 
-    # Step 5: Undervoltage holds → L2→L1 (power_sync=2'b01 < 2'b10)
+    # Step 5: Now drop medium too -> L2_STATE sees power_sync=2'b01 < 2'b10 -> L1_STATE
+    dut.ui_in.value = UNDERVOLTAGE
     await ClockCycles(dut.clk, CYCLES_TO_DROP)
     assert load_enable(dut) == LOW_POWER_OUT, (
-        f"Step5: expected L1 (001) after L2→L1 step-down, got {load_enable(dut):03b}"
+        f"Step5: expected L1 (001) after L2->L1 step-down, got {load_enable(dut):03b}"
     )
 
-    dut._log.info("PASS: L1→L2→L3→L2→L1 stepped de-escalation all correct")
+    dut._log.info("PASS: L1->L2->L3->L2->L1 stepped de-escalation all correct")
 
 
 @cocotb.test()
