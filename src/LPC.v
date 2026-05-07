@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-`default_nettype none
+
 
 
 module tt_um_load_priority_controller (
