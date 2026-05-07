@@ -54,7 +54,7 @@ module tt_um_load_priority_controller (
   //-------------------------------------------------
   // State register
   //-------------------------------------------------
-    always @(posedge clk or negedge rst)
+    always @(posedge clk or negedge rst_n)
   begin
       if (!rst_n)
       current_state <= LOW_POWER_MODE;
