@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
-project:
+project:    "LOAD PRIORITY CONTROLLER - An IEEE Division 1 Open Silicon Tapeout Initiative Project, A hardware FSM that allocates power by priority and sheds lower-priority loads to prevent overload. No firmware required
   title:        "Load Priority Controller"      # Project title
   author:       "Abiola Enoch, Omotosho Enoch, Esabu Blessing"      # Your name
   discord:      "rzbzt_40244, omotosho_enoch"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "A hardware FSM that allocates power by priority and sheds lower-priority loads to prevent overload. No firmware required."      # One line description of what your project does
+  description:  "An IEEE Division 1 Open Silicon Tapeout Initiative Project, A hardware FSM that allocates power by priority and sheds lower-priority loads to prevent overload. No firmware required."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
