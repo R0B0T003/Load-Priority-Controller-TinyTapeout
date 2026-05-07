@@ -1,11 +1,11 @@
 # Tiny Tapeout project information
-project:    "LOAD PRIORITY CONTROLLER - An IEEE Division 1 Open Silicon Tapeout Initiative Project, A hardware FSM that allocates power by priority and sheds lower-priority loads to prevent overload. No firmware required
-  title:        "Load Priority Controller"      # Project title
-  author:       "Abiola Enoch, Omotosho Enoch, Esabu Blessing"      # Your name
-  discord:      "rzbzt_40244, omotosho_enoch"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "An IEEE Division 1 Open Silicon Tapeout Initiative Project, A hardware FSM that allocates power by priority and sheds lower-priority loads to prevent overload. No firmware required."      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+project:
+  title:        "Load Priority Controller"
+  author:       "Abiola Enoch, Omotosho Enoch, Esabu Blessing"
+  discord:      "rzbzt_40244, omotosho_enoch"
+  description:  "An IEEE Division 1 Open Silicon Tapeout Initiative — Smart hardware FSM with staged load activation, noise filtering, and load shedding for power-constrained systems. No firmware required."
+  language:     "Verilog"
+  clock_hz:     50000000
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -33,10 +33,10 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "load_enable[0]"
-  uo[1]: "load_enable[1]"
-  uo[2]: "load_enable[2]"
-  uo[3]: "load_enable[3]"
+  uo[0]: "L1"
+  uo[1]: "L2"
+  uo[2]: "L3"
+  uo[3]: ""
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
