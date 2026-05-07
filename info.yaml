@@ -1,10 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "Load Priority Controller 
-"      # Project title
-  author:       "Abiola Enoch"      # Your name
-  discord:      "rzbzt_40244"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "An load priority power controller that allocates power by priority and sheds lower loads to prevent overload."      # One line description of what your project does
+  title:        "Load Priority Controller"      # Project title
+  author:       "Abiola Enoch, Omotosho Enoch, Esabu Blessing"      # Your name
+  discord:      "rzbzt_40244, omotosho_enoch"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A hardware FSM that allocates power by priority and sheds lower-priority loads to prevent overload. No firmware required."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -24,12 +23,12 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "clk"
-  ui[1]: "rst_n"
-  ui[2]: "undervoltage_flag"
-  ui[3]: "medium_power_flag"
-  ui[4]: "high_power_flag"
-  ui[5]: "ena"
+  ui[0]: "undervoltage_flag"
+  ui[1]: "medium_power_flag"
+  ui[2]: "high_power_flag"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
