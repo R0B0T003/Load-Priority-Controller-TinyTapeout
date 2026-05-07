@@ -1,6 +1,7 @@
 module tt_um_load_priority_controller (
     input wire clk,
-    input wire rst,
+    input wire rst_n,
+    input wire ena;
 
     // External power status 
     input wire undervoltage_flag,
@@ -23,9 +24,9 @@ module tt_um_load_priority_controller (
   //-------------------------------------------------
   // State register
   //-------------------------------------------------
-  always @(posedge clk or posedge rst)
+    always @(posedge clk or negedge rst)
   begin
-    if (rst)
+      if (!rst_n)
       current_state <= LOW_POWER_MODE;
     else
       current_state <= next_state;
